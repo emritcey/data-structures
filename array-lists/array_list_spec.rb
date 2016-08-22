@@ -4,12 +4,12 @@ describe ArrayList do
 	describe "#new" do 
 		it "has a default size" do
 			array = ArrayList.new
-			expect(array.size).to eq 5
+			expect(array.length).to eq 5
 		end 
 
 		it "can be size based on a users input" do 
 			array = ArrayList.new(10)
-			expect(array.size).to eq 10
+			expect(array.length).to eq 10
 		end 
 	end 
 
@@ -20,7 +20,7 @@ describe ArrayList do
 		end 
 
 		it "increases the length of the array" do 
-			expect(array.size).to eq 6
+			expect(array.length).to eq 6
 		end 
 	end 
 
@@ -47,7 +47,13 @@ describe ArrayList do
 		it "throws an OutOfBoundsError if index doesn't exist" do
 			expect { array.set(100, "what")}.to raise_error(OutOfBoundsError)
 		end 
+	end 
 
+	describe "#length" do 
+		it "returns the length of the array" do 
+			array = ArrayList.new
+			expect(array.length).to eq 5
+		end 
 	end 
 
 end

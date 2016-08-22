@@ -3,7 +3,7 @@ class ArrayList
 		@array = Array.new(size, nil)
 	end 
 
-	def size 
+	def length 
 		@array.length
 	end 
 
@@ -13,12 +13,12 @@ class ArrayList
 	end 
 
 	def get(index)
-		raise OutOfBoundsError if index >= self.size || index < 0
+		raise OutOfBoundsError if index >= self.length || index < 0
 		@array[index]
 	end 
 
 	def set(index, element)
-		raise OutOfBoundsError if index >= self.size || index < 0
+		raise OutOfBoundsError if index >= self.length || index < 0
 		@array[index] = element
 	end 
 
