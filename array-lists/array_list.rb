@@ -22,6 +22,11 @@ class ArrayList
 		@array[index] = element
 	end 
 
+	def insert(index, element)
+		raise OutOfBoundsError if index >= self.length || index < 0
+		@array.insert(index, element)
+	end 
+
 end
 
 class OutOfBoundsError < StandardError; end 
