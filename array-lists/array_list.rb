@@ -7,4 +7,9 @@ class ArrayList
 		@array.length
 	end 
 
+	def add(element)
+		@array.push(element)
+		element
+	end 
+
 end
