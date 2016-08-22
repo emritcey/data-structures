@@ -12,4 +12,11 @@ class ArrayList
 		element
 	end 
 
+	def get(index)
+		raise OutOfBoundsError if index >= self.size || index < 0
+		@array[index]
+	end 
+
 end
+
+class OutOfBoundsError < StandardError; end 
