@@ -22,8 +22,19 @@ describe ArrayList do
 		it "increases the length of the array" do 
 			expect(array.size).to eq 6
 		end 
-
 	end 
 
+	describe "#get" do 
+		array = ArrayList.new
+		array.add("hi!")
+		
+		it "can return an object that exists" do 
+			expect(array.get(6)).to eq "hi!"
+		end 
+
+		it "throws and OutOfBoundsError if element doesn't exist" do 
+			expect { array.get(7) }.to raise_error(OutOfBoundsError)
+		end 
+	end 
 
 end
