@@ -13,4 +13,17 @@ describe ArrayList do
 		end 
 	end 
 
+	describe "#add" do 
+		array = ArrayList.new
+		it "can add an element at the end of the list and return that element" do 
+			expect(array.add("hi")).to eq "hi"
+		end 
+
+		it "increases the length of the array" do 
+			expect(array.size).to eq 6
+		end 
+
+	end 
+
+
 end
