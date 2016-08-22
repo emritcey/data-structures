@@ -56,4 +56,17 @@ describe ArrayList do
 		end 
 	end 
 
+	describe "#insert" do
+		array = ArrayList.new 
+		it "will insert an object into the middle of a list, without deleting other items" do 
+			array.insert(2, "hi")
+			expect(array.get(2)).to eq "hi"
+		end 
+
+		it "will throw an error if spot doesn't exist yet" do
+			expect { array.insert(100, "hey") }.to raise_error(OutOfBoundsError)
+		end 
+	end 
+
+
 end
