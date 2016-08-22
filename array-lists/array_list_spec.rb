@@ -37,4 +37,17 @@ describe ArrayList do
 		end 
 	end 
 
+	describe "#set" do 
+		array = ArrayList.new
+		it "replaces an item in the array at a given index" do 
+			array.set(1, "hey there")
+			expect(array.get(1)).to eq "hey there"
+		end 
+
+		it "throws an OutOfBoundsError if index doesn't exist" do
+			expect { array.set(100, "what")}.to raise_error(OutOfBoundsError)
+		end 
+
+	end 
+
 end
