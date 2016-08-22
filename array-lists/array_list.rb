@@ -17,6 +17,11 @@ class ArrayList
 		@array[index]
 	end 
 
+	def set(index, element)
+		raise OutOfBoundsError if index >= self.size || index < 0
+		@array[index] = element
+	end 
+
 end
 
 class OutOfBoundsError < StandardError; end 
