@@ -1,5 +1,5 @@
 class ArrayList
-	def initialize(size=5)
+	def initialize(size = 5) 
 		@array = Array.new(size, nil)
 	end 
 
@@ -13,7 +13,7 @@ class ArrayList
 	end 
 
 	def get(index)
-		raise OutOfBoundsError if index >= self.length || index < 0
+		raise OutOfBoundsError if index >=self.length || index < 0
 		@array[index]
 	end 
 
