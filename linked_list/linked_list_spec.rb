@@ -4,24 +4,21 @@ describe LinkedList do
 
 	describe "new" do 
 		it "is initialized with head object == nil" do 
-			new_list = LinkedList.new
-			expect(new_list.first_element).to eq nil 
+			list = LinkedList.new
+			expect(list.first_element).to eq nil 
 		end 
-		it "can be initialized with a value" do 
-			new_list = LinkedList.new(5)
-			expect(new_list.first_element).to eq 5
-		end 
-
-		it "can be initialized with a Node" do 
-			new_node = Node.new(5)
-			new_list = LinkedList.new(new_node)
-			expect(new_list.first_element).to eq new_node 
-		end
 	end 
 
 	describe "insert first" do 
-		it "" do 
+		list = LinkedList.new
+
+		it "can set the first element" do 
+			a_node = Node.new(500)
+			list.insert_first(a_node)
+
+			expect(list.first_element).to eq a_node
 		end 
+		
 		it "" do 
 		end
 		it "" do 
