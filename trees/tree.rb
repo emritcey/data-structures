@@ -1,6 +1,6 @@
 class Tree
 
-  def initialize(node)
+  def initialize(node=nil)
     @root = node
   end
 
