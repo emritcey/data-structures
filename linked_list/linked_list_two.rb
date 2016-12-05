@@ -1,6 +1,7 @@
 require_relative 'node'
 
 class LinkedList
+  attr_reader :first_element
 
   def initialize(first=nil)
     @first_element = first
@@ -30,4 +31,21 @@ class LinkedList
   def remove_last
     @last_element = nil
   end
+
+  def get(index)
+    index.times do |x|
+
+    end
+
+  end
+
+  def set(index,element)
+  end
+
+  def insert(index, element)
+  end
+
+  def size
+  end
+
 end

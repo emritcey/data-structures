@@ -1,4 +1,6 @@
 class Node
+  attr_accessor :element
+  attr_reader:next
 
   def initialize(element)
     @element = element
@@ -9,7 +11,7 @@ class Node
     @next = other_node
   end
 
-  def remove_after()
+  def remove_after
     @next = nil
   end
 
