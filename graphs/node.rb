@@ -1,5 +1,5 @@
 class Node
-  attr_reader :value, :other_node
+  attr_reader :value, :nodes
 
   def initialize(value=nil)
     @value = value
@@ -11,7 +11,7 @@ class Node
   end
 
   def exists?(&block)
-    value.exists?(&block)
+    @nodes.exists?(&block)
   end
 
 
